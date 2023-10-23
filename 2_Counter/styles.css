@@ -1,0 +1,25 @@
+h1{
+    font-size: 4em;
+}
+
+p{
+    margin: 20px 0;
+    font-size: 8em;
+}
+
+button{
+    margin: 0 7px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    letter-spacing: 3px;
+}
+
+#container{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20vh auto;
+    text-align: center;
+    /* border: solid 1px red; */
+    width: 80%;
+    height: 50%;
+}
