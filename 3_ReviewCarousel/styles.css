@@ -47,6 +47,8 @@ main {
   position: relative;
 }
 #person-img {
+  border: 7px solid rgb(85, 190, 255);
+  border-width: 7px 6px 0 0;
   width: 100%;
   /* display: block; */
   height: 100%;
@@ -97,4 +99,9 @@ main {
   padding: 0.25rem;
   color: rgb(51, 156, 221);
   background-color: rgb(213, 239, 255);
+}
+
+.surprise:hover {
+  background-color: rgb(56, 163, 230);
+  color: rgb(205, 236, 255);
 }
