@@ -20,7 +20,7 @@ main {
 }
 
 .title {
-  margin-bottom: 4rem;
+  margin: 0;
 }
 
 .underline {
@@ -31,8 +31,11 @@ main {
 }
 
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 80vh;
+  padding: 2rem;
+  box-shadow: 0 0 10px grey;
+  border-radius: 5px;
 }
 .img-container {
   /* position: relative; */
@@ -41,6 +44,7 @@ main {
   /* border-radius: 50%; */
   margin: 0 auto;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 #person-img {
   width: 100%;
@@ -49,4 +53,33 @@ main {
   object-fit: cover;
   border-radius: 50%;
   /* position: relative; */
+}
+
+.quotes {
+  position: absolute;
+  background-color: rgb(85, 190, 255);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 1rem;
+}
+
+.job {
+  margin: 0.25rem 0 1rem 0;
+  font-weight: lighter;
+  color: rgb(85, 190, 255);
+}
+
+.text {
+  line-height: 1.5;
+  color: rgb(62, 112, 143);
+}
+
+.carousel-buttons {
+  margin: 1rem 0 0 0;
+}
+
+.signals {
+  margin-bottom: 0.5rem;
 }
