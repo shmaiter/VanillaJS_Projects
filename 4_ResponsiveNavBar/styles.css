@@ -72,6 +72,10 @@ Classes
   display: block;
 }
 
+.rotate {
+  transform: rotate(90deg);
+}
+
 .menu:hover {
   cursor: pointer;
 }
@@ -99,4 +103,36 @@ Classes
   }
 
   /* Add more styles as needed */
+}
+
+.shaking:hover {
+  /* Basic syntax for the animation shorthand property 
+
+    animation: name duration timing-function delay iteration-count direction;
+    animation: myAnimation 2s ease-in-out 1s infinite alternate;
+  */
+  animation: shake-rotating 0.1s ease-out infinite alternate;
+}
+
+@keyframes shake-rotating {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
 }
