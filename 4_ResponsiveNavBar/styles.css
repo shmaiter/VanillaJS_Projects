@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Open+Sans:wght@300&family=Roboto&display=swap");
+
 /*
 =============== 
 Global Styles
@@ -21,10 +23,6 @@ ul {
   list-style-type: none;
 }
 
-li {
-  display: inline-block;
-}
-
 /*
 =============== 
 Classes
@@ -32,11 +30,73 @@ Classes
 */
 
 .container {
-  display: flex;
-  justify-content: space-between;
   padding: 1rem;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.5rem;
+  color: coral;
 }
 
 .container div:first-child {
   font-size: 2.5rem;
+}
+
+.left {
+  font-family: Agbalumo, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle,
+.right {
+  letter-spacing: 4px;
+  display: none;
+}
+
+.middle li,
+.right li {
+  margin: 0 0.5rem;
+}
+
+.left li span,
+.menu {
+  color: rgb(64, 188, 178);
+}
+
+.menu {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.showContent {
+  display: block;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) {
+  /* CSS code specific to viewport width equal to or greater than 1100 pixels */
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .middle,
+  .right {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* Add more styles as needed */
 }
