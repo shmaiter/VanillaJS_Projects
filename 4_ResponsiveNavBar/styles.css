@@ -1,0 +1,42 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Tags
+===============
+*/
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+/*
+=============== 
+Classes
+===============
+*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.container div:first-child {
+  font-size: 2.5rem;
+}
