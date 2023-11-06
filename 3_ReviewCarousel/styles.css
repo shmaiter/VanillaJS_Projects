@@ -79,7 +79,7 @@ main {
 }
 
 .carousel-buttons {
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .signals {
@@ -104,4 +104,11 @@ main {
 .surprise:hover {
   background-color: rgb(56, 163, 230);
   color: rgb(205, 236, 255);
+  cursor: pointer;
+}
+
+.signals button:first-child:hover,
+.signals button:nth-child(2):hover {
+  cursor: pointer;
+  transform: scale(1.5);
 }
