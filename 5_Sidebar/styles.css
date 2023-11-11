@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Open+Sans:wght@300&family=Roboto&display=swap");
+
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Tags
+===============
+*/
+
+body {
+  min-width: 350px;
+  background-color: rgb(239, 239, 239);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the parent element's color */
+  cursor: pointer; /* Show pointer cursor on hover, similar to clickable elements */
+}
+/*
+=============== 
+Classes
+===============
+*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  font-family: Open Sans, sans-serif;
+  font-size: 1.5rem;
+  color: coral;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar div:first-child {
+  font-size: 2.5rem;
+}
+
+.header-container {
+  padding: 1rem;
+  font-family: Agbalumo, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  /* color: rgb(179, 26, 26); */
+  margin-top: 8px;
+  font-size: 1.5rem;
+  transition: transform 0.6s ease;
+}
+
+.close:hover {
+  transform: rotate(360deg);
+}
+
+.links,
+.social {
+  letter-spacing: 4px;
+}
+
+.links li {
+  padding: 0.5rem 1.1rem;
+}
+
+.social {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-container li span,
+.menu {
+  color: rgb(64, 188, 178);
+}
+
+.menu {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.showContent {
+  display: block;
+  transform: translateX(40vw);
+}
+
+.hideContent {
+  transform: translateX(-40vw);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.showContent li {
+  transition: transform 0.3s ease;
+}
+
+.showContent li:hover {
+  transform: translateX(15px);
+}
+
+.links li:hover {
+  background: rgba(255, 127, 80, 0.221);
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  /* CSS code specific to viewport width equal to or greater than 1100 pixels */
+  .sidebar {
+    width: 40%;
+  }
+  .menu {
+    display: block;
+  }
+  /* Add more styles as needed */
+}
+
+.shaking:hover {
+  /* Basic syntax for the animation shorthand property 
+
+    animation: name duration timing-function delay iteration-count direction;
+    animation: myAnimation 2s ease-in-out 1s infinite alternate;
+  */
+  animation: shake-rotating 0.1s ease-out infinite alternate;
+}
+
+@keyframes shake-rotating {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
+}
