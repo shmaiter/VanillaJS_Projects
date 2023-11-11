@@ -21,12 +21,18 @@ Tags
 
 body {
   min-width: 350px;
+  background-color: rgb(239, 239, 239);
 }
 
 ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the parent element's color */
+  cursor: pointer; /* Show pointer cursor on hover, similar to clickable elements */
+}
 /*
 =============== 
 Classes
@@ -34,10 +40,11 @@ Classes
 */
 
 .container {
-  padding: 1rem;
   font-family: Open Sans, sans-serif;
   font-size: 1.5rem;
   color: coral;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container div:first-child {
@@ -45,6 +52,7 @@ Classes
 }
 
 .left {
+  padding: 1rem;
   font-family: Agbalumo, sans-serif;
   display: flex;
   justify-content: space-between;
@@ -57,9 +65,8 @@ Classes
   display: none;
 }
 
-.middle li,
-.right li {
-  margin: 0 0.5rem;
+.middle li {
+  padding: 0.5rem 1.1rem;
 }
 
 .left li span,
@@ -84,16 +91,17 @@ Classes
   cursor: pointer;
 }
 
-.middle li {
-  margin: 10px 0;
-  transition: font-size 0.3s ease;
+.showContent li {
+  transition: transform 0.3s ease;
+}
+
+.showContent li:hover {
+  transform: translateX(15px);
 }
 
 .middle li:hover {
-  background: rgba(190, 190, 190, 0.139);
-  width: 270px;
+  background: rgba(255, 127, 80, 0.221);
   cursor: pointer;
-  font-size: 30px;
 }
 
 @media (min-width: 1100px) {
@@ -116,6 +124,11 @@ Classes
 
   .menu {
     display: none;
+  }
+
+  .middle li,
+  .right li {
+    padding: 0 0.5rem;
   }
 
   /* Add more styles as needed */
