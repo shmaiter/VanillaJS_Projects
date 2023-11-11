@@ -31,7 +31,6 @@ ul {
 a {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Use the parent element's color */
-  cursor: pointer; /* Show pointer cursor on hover, similar to clickable elements */
 }
 /*
 =============== 
@@ -68,7 +67,7 @@ Classes
 
 .close {
   /* color: rgb(179, 26, 26); */
-  margin-top: 8px;
+  margin: 8px 0 0 32px;
   font-size: 1.5rem;
   transition: transform 0.6s ease;
 }
@@ -77,8 +76,7 @@ Classes
   transform: rotate(360deg);
 }
 
-.links,
-.social {
+.links {
   letter-spacing: 4px;
 }
 
@@ -88,7 +86,8 @@ Classes
 
 .social {
   position: fixed;
-  bottom: 0;
+  bottom: 1.1rem;
+  left: 1.1rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -101,15 +100,17 @@ Classes
 .menu {
   font-size: 2.5rem;
   margin: 1rem;
+  position: fixed;
+  right: 15px;
 }
 
 .showContent {
   display: block;
-  transform: translateX(40vw);
+  transform: translateX(100vw);
 }
 
 .hideContent {
-  transform: translateX(-40vw);
+  transform: translateX(-100vw);
 }
 
 .rotate {
@@ -118,6 +119,10 @@ Classes
 
 .menu:hover {
   cursor: pointer;
+}
+
+.hideMenu {
+  display: none;
 }
 
 .showContent li {
@@ -133,14 +138,15 @@ Classes
   cursor: pointer;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   /* CSS code specific to viewport width equal to or greater than 1100 pixels */
   .sidebar {
-    width: 40%;
+    /* max-width: 40%; */
+    width: auto;
   }
-  .menu {
+  /* .menu {
     display: block;
-  }
+  } */
   /* Add more styles as needed */
 }
 
